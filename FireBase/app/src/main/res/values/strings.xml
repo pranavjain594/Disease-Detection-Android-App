@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FireBase</string>
+    <string-array name="models">
+        <item>Float</item>
+        <item>Quantized</item>
+    </string-array>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first2"
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="118dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="208dp"
+        android:background="#7E3F51B5"
+        android:onClick="detect"
+        android:text="Detect Image"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="262dp"
+        android:layout_height="243dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="111dp"
+        android:background="@drawable/pneumo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/galleryButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="28dp"
+        android:background="@android:color/holo_green_dark"
+        android:clickable="true"
+        android:onClick="onImageFromGalleryClick"
+        android:src="@drawable/ic_image_black_24dp"
+        android:tint="@android:color/white"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
