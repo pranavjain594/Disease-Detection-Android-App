@@ -54,6 +54,15 @@ v.	COVID 19- model
 
 As it was a completely new disease and there is very little information about this disease, so a wide data set for the disease was likely to be found. However, an image dataset of Human Lung CT Scans having 349 lung CT scan images of Covid positive patients and 397 lung CT scan images of Covid negative patients was obtained from Kaggle. This model was trained using Google’s Teachable Machine in 75 epochs with a bath size of 128 images and 0.001 learning rate.
 
+**Below are the accuracy of our models in detecting the respective disease:** 
+| Model(Disease)  | Accuracy |
+| ------------- | ------------- |
+| Malaria  | 95.21%  |
+| Pneumonia  | 90.06%  |
+| Breast Cancer  | 89.60%  |
+| Skin Cancer  | 88.90%  |
+| Covid  | 86.00%  |
+
 ## The View
 
 A View is something available to the user. It reflects the user interface with which the user is communicating while using an application. While the View has buttons, it, itself remains unaware of the fundamental interaction that exists with the back-end. It helps UI / UX people to operate in parallel with the people at the back-end of the user interface.
