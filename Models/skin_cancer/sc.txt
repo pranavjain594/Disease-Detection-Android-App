@@ -1,0 +1,2 @@
+0 benign skin cancer
+1 malignant skin cancer
