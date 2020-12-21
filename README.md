@@ -1,11 +1,13 @@
-# Product Perspective
+## Product Link
+*Apk file download link* :- [*diseasedetction.apk*](https://drive.google.com/file/d/1HNFFsco9lNsbCjfDmtX_RxkptkdkE7bT/view?usp=sharing)
+
+## Product Perspective
 
 The DISEASE DETECTION ANDROID APPLICATION helps not only the patients but also the health-care professionals to predict the medical test results more effectively and in a bias-free manner by computerizing the prediction process.
 
 Predictions or results will be generated from the medical test images which will help the patients to make appropriate decisions regarding the course of their treatment. For example, if the patient fails to get the doctor’s appointment, they can still know the results of their medical tests by simply using this android app and this in term saves time and money.
 
-# Product Functionality
-
+## Product Functionality
 
 All the functions of the system will be performed in this order-
 
@@ -17,17 +19,17 @@ All the functions of the system will be performed in this order-
 6. Determine and analyze the output
 7. Display the output
 
-# Product Design
+## Product Design
 
 The proposed idea was implemented using Java in the form of an android application having an interface and made using the Model-View-Controller (MVC) design pattern. The application is ”apk” installable. The Model and the View can run independently using the MVC pattern. The Model module can be used separately in other programs.
 
 
-# The MVC Model
+## The MVC Model
 
 Model-view-controller (MVC) is an architectural pattern widely used to design user interfaces, which divides an application into three interrelated components. This is done to distinguish internal information representations from how information is communicated to and accepted from the user. The design pattern of MVC decouples these major components to allow efficient reuse of code and also allows parallel development of each of the component. This architecture is mostly used for desktop graphical user interfaces (GUIs) and is popular in designing web applications.
 
 
-# The Model
+## The Model
 
 A Model is the application's principal central component. It receives user inputs and commands via the View component and uses the logic to generate outputs, which is shown again via the View component. This Model comprises of various sub-models which represent each disease. In this project, we have used five different diseases, each having its own model.
 
@@ -52,25 +54,25 @@ v.	COVID 19- model
 
 As it was a completely new disease and there is very little information about this disease, so a wide data set for the disease was likely to be found. However, an image dataset of Human Lung CT Scans having 349 lung CT scan images of Covid positive patients and 397 lung CT scan images of Covid negative patients was obtained from Kaggle. This model was trained using Google’s Teachable Machine in 75 epochs with a bath size of 128 images and 0.001 learning rate.
 
-# The View
+## The View
 
 A View is something available to the user. It reflects the user interface with which the user is communicating while using an application. While the View has buttons, it, itself remains unaware of the fundamental interaction that exists with the back-end. It helps UI / UX people to operate in parallel with the people at the back-end of the user interface.
 
-# The Controller
+## The Controller
 
 A Controller is a master that synchronizes the Model along with View. It obtains the user's interaction with the View, transmits them on to the Model that then processes the input information for output production. Through the View, the outputs (results) are then shown to the user.
 
-# How 'MVC' fits into this project
+## How 'MVC' fits into this project
 
 The View in our project is represented by the android application interface where the user can select the disease, upload the image, and generate the output. The results will be displayed to the user through this interface only. When the user will press the detect button available on the screen, a function will be called at the backend which in turn will call other functions each having the unique functionality i.e., transforming the image, augmenting it, importing the model, interpreting the output etc. The function calls will work as controller in our project. The custom CNN models are present in the firebase repository and also in the assets folder of the android application, which are imported by the controller at the time function calls. With the help of these, we can alter and run the GUI component separately without compromising the functionality of the other components. Similarly, by importing separately from the GUI we can modify the Detector component and use it as a module as well.
 
-# Working
+## Working
 
 On opening "DISEASE DETECION APP" application, the main activity displays five buttons (for each disease). When the user clicks on the button of a particular disease, a new activity will be launched through the onClick() method of the respective button. This new activity consists of the Float Action Button, the ‘Detect Image’ button along with an ImageView. The Float Action Button calls upon the onImageFromGalleryClick() function which reads the path of the image that is to be uploaded using Intent.ACTION_GET_CONTENT. The uploaded image is then resized into 224 x 224 pixels automatically before displaying it to the user at the ImageView with the help of the setImageURI() function. 
 
 When the user clicks on the ‘Detect Image’ button, the button calls upon the detect() function which then retrieves the path of the uploaded image from the imageView and takes it as an input using getYourInputImage() function. The image is then transformed into the target size before loading. The corresponding saved CNN model is then used to classify the image. The result is displayed to the user on the screen through the toast. In this way, the user can classify different images of a particular disease in the same activity or can go back to the menu to detect different diseases.
 
-# Installation
+## Installation
 
 The application is “apk” installable and can be installed in the following way-
 
@@ -79,3 +81,6 @@ The application is “apk” installable and can be installed in the following w
 2. You will see the application package installing and after it is done press Close.
 
 3. Open the “Disease Detection App” to run the application.
+
+
+(**Note:** The custom CNN models are not uploaded in the repository.)
